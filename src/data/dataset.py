@@ -1,7 +1,7 @@
 import pandas as pd
 import torch
 from src.data.shape_to_manyhot import shape_to_manyhot
-from algomus_tab_tabasco.parser.chord_label_translator import get_vector_representation, get_chord_label_notes, get_chord_label
+from src.data.chord_label_translator import get_vector_representation, get_chord_label_notes, get_chord_label
 from src.config import NUM_FRETS, NUM_STRINGS, PITCH_CLASSES
 import src.data.chord_functions as F
 from src.data.open_chords import shape_is_open_chord
