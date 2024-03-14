@@ -1,8 +1,11 @@
+aiohttp
+aiosignal
 anyio
 argon2-cffi
 argon2-cffi-bindings
 arrow
 asttokens
+async-timeout
 attrs
 Babel
 beautifulsoup4
@@ -24,6 +27,7 @@ fastjsonschema
 filelock
 fonttools
 fqdn
+frozenlist
 fsspec
 idna
 ipydatawidgets
@@ -54,12 +58,15 @@ jupyterlab_pygments
 jupyterlab_server
 jupyterlab_widgets
 kiwisolver
+lightning
+lightning-utilities
 MarkupSafe
 matplotlib
 matplotlib-inline
 mistune
 more-itertools
 mpmath
+multidict
 music21
 nbclient
 nbconvert
@@ -98,6 +105,7 @@ pyparsing
 python-dateutil
 python-json-logger
 pythreejs
+pytorch-lightning
 pytz
 PyYAML
 pyzmq
@@ -116,6 +124,7 @@ sympy
 terminado
 tinycss2
 torch
+torchmetrics
 tornado
 tqdm
 traitlets
@@ -133,3 +142,4 @@ webencodings
 websocket-client
 websockets
 widgetsnbextension
+yarl
