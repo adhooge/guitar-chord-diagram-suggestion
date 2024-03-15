@@ -4,6 +4,21 @@ import matplotlib as mpl
 from math import floor
 
 class Diagram():
+    @staticmethod
+    def get_num_frets(diagram: str, minimum_size: int = 4) -> int:
+        num_frets = minimum_size
+        min_fret = 999
+        max_fret = -1
+        for f in diagram.split('.'):
+            if f != 'x':
+                v = int(f)
+                if v > max_fret:
+                    max_fret = v
+                if v < min_fret:
+                    min_fret = v
+        if (max_fret - min_fret) > minimum_size:
+            num_frets = max_fret - min_fret + 1
+        return num_frets
 
     def __init__(self, num_strings: int = 6, num_frets: int = 4,
             root_fret: int = 1, diagram: str = '', ax: plt.Axes | None = None,
@@ -12,7 +27,10 @@ class Diagram():
             marker_size: int = 80, interactive: bool = False, show_title: bool = False,
             textbox: mpl.widgets.TextBox | None = None) -> None:
         self.num_strings = num_strings
-        self.num_frets = num_frets
+        if diagram == '':
+            self.num_frets = num_frets
+        else:
+            self.num_frets = Diagram.get_num_frets(diagram)
         self.root_fret = root_fret
         self.diagram: List[str]
         self.textbox = textbox
