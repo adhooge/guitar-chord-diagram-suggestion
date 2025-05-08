@@ -125,8 +125,6 @@ def main(parser: ArgumentParser) -> int:
             if args.verbose:
                 print("The model suggests the following fingering:")
             print(TorchDataset.fingering_from_target_tensor(pred_bin, with_mute=model.with_mute))
-    for k, v in results.items():
-        print(f"{k}: {mean(v):.2f} ± {stdev(v):.2f}")
     return 0
 
 
