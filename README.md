@@ -79,13 +79,23 @@ This will generate new `.csv` files. The most important ones are `chordpairs`, y
 
 ## Model Training
 
-We provide checkpoints of the models we trained for the paper, but you can reproduce the 
+We provide checkpoints of the models we trained for the paper (in the `logs/` folder), but you can reproduce the 
 training procedure or train your own model using the script `cds/train.py`
+
+```
+python -m cds.train -n <a name for the trained model>
+```
+
+It will create a new subfolder in `logs/` with your best checkpoint as well as some info about training.
 
 ## Testing
 
 You can reproduce the results of the paper with the provided checkpoints (or your own) by
 running `cds/test.py`.
+
+```
+python -m cds.test -s <path/to/ckpt> -T 
+```
 
 ### Getting stats on data
 
