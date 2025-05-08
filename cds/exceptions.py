@@ -1,0 +1,2 @@
+class RootError(Exception):
+    pass
