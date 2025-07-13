@@ -102,3 +102,9 @@ python -m cds.test -s <path/to/ckpt> -T
 In the paper, we provide statistics for the features on the test data to get 
 a reference.
 You can reproduce this with `cds/data/stats_on_df-script.py`.
+
+### Licensing
+
+The code is released under a GPL-v3.0 license, refer to the `LICENSE` file for more details.
+
+The chord data is released under an ODbL license, refer to the `DATA_LICENSE` file for more details.
